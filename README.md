@@ -44,7 +44,7 @@ apt-get -y install php unzip git wget
 ## Installing (Kali Linux/Termux):
 
 ```
-git clone https://github.com/techchipnet/hound
+git clone https://github.com/viper081599/cyberrhodztrace
 cd hound
 bash cyberrhodztrace.sh
 ```
