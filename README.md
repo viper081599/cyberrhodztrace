@@ -45,7 +45,7 @@ apt-get -y install php unzip git wget
 
 ```
 git clone https://github.com/viper081599/cyberrhodztrace
-cd hound
+cd cyberrhodztrace
 bash cyberrhodztrace.sh
 ```
 ## Change log:
